@@ -1,6 +1,6 @@
 # main_pipeline.py
 # Integrated Deepfake + Microexpression Detection
-# Author: Anushka 💚
+# Author: Anushka
 
 import os
 import sys
@@ -57,7 +57,7 @@ def run_microexpression_analysis():
     print("\n[Step 2] Running Microexpression Detection...")
 
     try:
-        from anushka_part import fuzzy_integ
+        from micropart import fuzzy_integ
         result = fuzzy_integ.run_analysis()
         print(f"\n[Result] {result}")
     except Exception as e:
@@ -68,7 +68,7 @@ def run_microexpression_analysis():
 # 3️⃣ Main Pipeline
 # -----------------------------------
 if __name__ == "__main__":
-    print("=== ECOWATT: Deepfake + Microexpression Pipeline ===")
+    print("===Deepfake + Microexpression Pipeline ===")
 
     input_path = input("Enter the path to your image or video: ").strip()
 
@@ -84,3 +84,4 @@ if __name__ == "__main__":
         run_microexpression_analysis()
 
     print("\n✅ Process completed.")
+
